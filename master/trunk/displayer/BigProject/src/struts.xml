@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+    <!--<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+     <constant name="struts.devMode" value="false" /> -->
+     
+ <package name="ajax-json-plugin" extends="json-default">
+      <!-- 岗位与招聘人数饼状图 -->
+      <action name="RecruitingAction" class="action.RecruitingAction">
+            <result name="success" type="json">
+            <param name="root">dataList</param>
+            </result>
+        </action>
+       <!-- 地区与工资柱状图 -->
+         <action name="RegionSalaryAction" class="action.RegionSalaryAction">
+            <result name="success" type="json">
+            <param name="root">dataList</param>
+            </result>
+        </action>
+        
+     <!-- 岗位与工资柱状图 -->
+     <action name="PositionSalaryAction" class="action.PositionSalaryAction">
+            <result name="success" type="json">
+            <param name="root">dataList</param>
+            </result>
+        </action>
+        
+     <!-- 地区与工资柱状图 -->
+     <action name="RegionNumberAction" class="action.RegionNumberAction">
+            <result name="success" type="json">
+            <param name="root">dataList</param>
+            </result>
+        </action>
+</package>
+
+
+     <constant name="struts.enable.DynamicMethodInvocation" value="false" />
+     <constant name="struts.devMode" value="false" />
+     
+    <package name="struts" extends="struts-default">
+ 
+  <!--  <action name="RecruitingAction" class="action.RecruitingAction">
+            <result name="success">Recruiting.jsp</result>
+        </action>   -->
+    </package>
+
+    <!-- Add packages here -->
+</struts>    
