@@ -23,6 +23,7 @@ public class DataParse {
 	
 	private DBManager dbManager = null;
 	
+	//从配置文件中获得需要提取的字段名
  	public DataParse()
 	{
 		InputStream in = DataParse.class.getResourceAsStream("dbConfig.properties");
@@ -38,6 +39,7 @@ public class DataParse {
 			
 			try
 			{
+				//将从配置文件中获得的字段，将字段分开，组装到 contentKeys 中
 				String keysStr = config.getProperty("keys"); 
 				setContentKeys(keysStr.split(" "));
 				contentValues = new Object[contentKeys.length];
@@ -56,14 +58,20 @@ public class DataParse {
 		}
 	}
 
+	//contentKeys getter
 	public String[] getContentKeys() {
 		return contentKeys;
 	}
 
+	//contentKeys setter
 	public void setContentKeys(String[] contentKeys) {
 		this.contentKeys = contentKeys;
 	}
 	
+	
+	/*
+	* 将 zhaopin_all 文件夹下的子文件夹名取出组装到fileDirectorys中
+	*/
 	public void setDirectory()
 	{
 		File rootDir = new File(ROOTDIR);
@@ -78,6 +86,9 @@ public class DataParse {
 		}
 	}
 	
+	/*
+	* 获得每个子文件夹下的html文件的完整路径
+	*/
 	public ArrayList<String> getHtmlFileNames(String dirStr)
 	{
 		ArrayList<String> result = new ArrayList<String>();
@@ -94,6 +105,9 @@ public class DataParse {
 		return result;
 	}
 	
+	/*
+	* 使用jsoup从html文件中解析出所需要的字段，将数据插入到数据库中
+	*/
 	public void insertDataToDatabase(String dir,ArrayList<String> array)
 	{
 		Document document = null;
