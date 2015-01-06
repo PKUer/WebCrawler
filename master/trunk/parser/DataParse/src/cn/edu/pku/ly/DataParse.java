@@ -144,14 +144,17 @@ public class DataParse {
 					contMap.put(contKey.get(j).text().toString(), contValue.get(j).text().toString());
 				}
 				
+				//用jsoup从html中获得字段
 				// 职位名称
 				contValue = document.select("div[class=inner-left fl]>h1");
 				contMap.put("职位名称", contValue.text());
 
+				//用jsoup从html中获得值
 				//发布公司 
 				contValue = document.select("div[class=inner-left fl]>h2");
 				contMap.put("发布公司", contValue.text());
 
+				//从上面的数据中计算组织下面的数据
 				//文件目录 
 				contMap.put("文件目录", dir);
 				
