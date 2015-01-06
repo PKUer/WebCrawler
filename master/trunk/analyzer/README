@@ -1,2 +1,10 @@
 this is analyzer for analyzing data
-数据分析模块工程目录
+数据分析模块工程目录，采用了Hibrenate框架。
+张龙云负责：
+岗位—招聘人数数据分析
+地区—招聘人数数据分析
+马敏钊负责：
+地区—工资数据分析
+岗位—工资数据分析
+
+分析后的数据放入analysisResult数据库表
