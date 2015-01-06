@@ -41,6 +41,7 @@ public class DBManager {
 			
 			try
 			{
+				//从配置文件中读取数据库的配置信息
 				jdbcDriver = config.getProperty("driver");
 				jdbcUrl = config.getProperty("url");
 				userName = config.getProperty("user");
