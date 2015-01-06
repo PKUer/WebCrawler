@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+          "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+          "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+
+	<session-factory>
+		<property name="connection.username">root</property>  <!-- 数据库用户名 -->
+		
+		<property name="connection.url">
+			jdbc:mysql://localhost:3306/jobresult
+		</property>					    
+		
+		<property name="dialect">			 	<!-- 数据库的方言 -->
+			org.hibernate.dialect.MySQLDialect
+		</property>
+		
+		<property name="connection.password">root</property>    <!-- 密码 -->
+		<property name="connection.driver_class">				<!-- 驱动 -->
+			com.mysql.jdbc.Driver
+		</property>
+		<mapping resource="entity/AnalysisResult.hbm.xml"/>		
+	</session-factory>
+</hibernate-configuration>

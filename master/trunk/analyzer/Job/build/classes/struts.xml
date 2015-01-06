@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	
+	<!--  <package name="default" extends="struts-default">-->
+	
+	<include file="struts-default.xml" />
+	<package name="my_struts2" extends="struts-default">
+		
+	
+<!-- ******************************** -->	
+		<action name="WebAction" class="action.WebAction">  
+			<result name="input">/index.jsp</result>
+			<result name="success">/success.jsp</result>
+		</action>
+		<action name="CppAction" class="action.CppAction">  
+			<result name="input">/index.jsp</result>
+			<result name="success">/success.jsp</result>
+		</action>
+		<action name="JavaAction" class="action.JavaAction">  
+			<result name="input">/index.jsp</result>
+			<result name="success">/success.jsp</result>
+		</action>
+		<action name="IOSAction" class="action.IOSAction">  
+			<result name="input">/index.jsp</result>
+			<result name="success">/success.jsp</result>
+		</action>
+		<action name="AndroidAction" class="action.AndroidAction">  
+			<result name="input">/index.jsp</result>
+			<result name="success">/success.jsp</result>
+		</action>
+		<action name="WinPhoneAction" class="action.WinPhoneAction">  
+			<result name="input">/index.jsp</result>
+			<result name="success">/success.jsp</result>
+		</action>
+	</package>
+</struts>
+
+

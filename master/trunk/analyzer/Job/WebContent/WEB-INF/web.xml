@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  
+  <!-- display-name 没什么实际意义，对应的是XML编辑器显示的名称 -->
+  <display-name>Job</display-name>
+ 
+	<!-- 核心控制器，拦截用户请求 -->
+	<filter>
+		<filter-name>struts2</filter-name>
+		<filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
+	</filter>
+  
+	<!-- filter-mapping用来指定让Struts2框架来处理用户的哪些请求 -->
+	<filter-mapping>
+		<filter-name>struts2</filter-name>
+		<!-- * :表示用户的所有请求都使用此框架来处理 -->
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	 <!-- 欢迎页面 -->
+	  <welcome-file-list>
+	    <welcome-file>index.jsp</welcome-file>
+	  </welcome-file-list>
+	  
+</web-app>

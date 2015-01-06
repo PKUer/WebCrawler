@@ -1,0 +1,11 @@
+eclipse.preferences.version=1
+encoding//src/action/AndroidAction.java=UTF-8
+encoding//src/action/IOSAction.java=UTF-8
+encoding//src/action/JavaAction.java=UTF-8
+encoding//src/action/WebAction.java=UTF-8
+encoding//src/action/WinPhoneAction.java=UTF-8
+encoding//src/config/HibernateSessionFactory.java=UTF-8
+encoding//src/dao/NumDao.java=UTF-8
+encoding//src/dao/SalaryDao.java=UTF-8
+encoding//src/entity/AnalysisResult.java=GBK
+encoding//src/entity/JobInfo.java=GBK

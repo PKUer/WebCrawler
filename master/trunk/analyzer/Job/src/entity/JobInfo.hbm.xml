@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>						
+    <class name="entity.AnalysisResult" table="analysisresult" catalog="jobresult">
+	
+      <!-- 主键 -->
+        <id name="job_id" type="java.lang.Integer">
+            <column name="job_id" />
+            <generator class="native" />
+        </id>
+         <property name="average_salary" length="20" not-null="false" />
+		 <property name="job_location" length="20" not-null="false" />
+         <property name="positionName" length="10" not-null="false"/>  
+         <property name="hire_num_trans" length="5" not-null="false"/>   	
+         <property name="job_position" length="20" not-null="false"/>   	 	
+    </class>
+</hibernate-mapping>
