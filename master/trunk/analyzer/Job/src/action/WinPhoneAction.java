@@ -1,6 +1,9 @@
 package action;
 import com.opensymphony.xwork2.ActionSupport;
 
+/*
+*	针对WinPhone招聘的分析
+*/
 import dao.*;
 import entity.*;
 @SuppressWarnings("serial")
