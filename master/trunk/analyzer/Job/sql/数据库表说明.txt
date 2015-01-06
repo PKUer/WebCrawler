@@ -1,0 +1,7 @@
+字段
+analysisId: 编号
+city:城市
+positionName:岗位名称
+peopleNum:招聘人数
+salary:平均月薪
+type:类似
