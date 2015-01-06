@@ -4,4 +4,12 @@ city:城市
 positionName:岗位名称
 peopleNum:招聘人数
 salary:平均月薪
-type:类似
+type:类型
+
+其中city
+0:全国
+1：北京
+2：上海
+3：广州
+4：深圳
+5：杭州
